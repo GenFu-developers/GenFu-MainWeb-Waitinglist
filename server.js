@@ -8,7 +8,7 @@ const app = express()
 const PORT = 3000
 
 // static files
-app.use('/', express.static('public'))
+// app.use('/', express.static('public'))
 
 // middleware
 app.use(bodyParser.urlencoded({ extended: true }));
