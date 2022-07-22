@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="/styles/style.css">
+        <!--========== Tailwind CSS ==========-->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    clifford: '#da373d',
+                }
+                }
+            }
+            }
+        </script>
+        <!--========== Page Title ==========-->
+        <title>GenFu</title>
+        <!--========== Meta Data ==========-->
+        <meta
+            name="description"
+            content="Frontend Mentor Challenges are challenges to improve
+            front-end coding skills by creating real projects."
+            />
+        <meta
+            name="keywords"
+            content="html, css, javascript, front-end, websites"
+            />
+        <meta name="author" content="Alexcarmonadev" />
+    </head>
+
+    <!--========== Body ==========-->
+    <body class="bg-[url('/assets/bg.png')] bg-cover bg-fixed">
+        <!--========== Scroll signs ==========-->
+        <!-- <div>
+
+        </div> -->
+        <!--========== Header ==========-->
+        <img class="max-w-[14rem] md:max-w-screen-sm lg:max-w-screen-md
+            mx-auto mt-10"
+            src="/assets/GenFu-Logo-white.png" alt="logo">
+
+        <!--========== Countdown ==========-->
+        <div class="main">
+            <section class="main__tab">
+                <div class="main__tab-days numbers">
+                    <div class="number-top">08</div>
+                    <div class="number-top-back"><span>08</span></div>
+                    <div class="number-bottom">08</div>
+                    <div class="number-bottom-back"><span>08</span></div>
+                </div>
+                <h2 class="main__tab-title">Days</h2>
+            </section>
+
+            <section class="main__tab">
+                <div class="main__tab-hours numbers">
+                    <div class="number-top">23</div>
+                    <div class="number-top-back"><span>23</span></div>
+                    <div class="number-bottom">23</div>
+                    <div class="number-bottom-back"><span>23</span></div>
+                </div>
+                <h2 class="main__tab-title">hours</h2>
+            </section>
+
+            <section class="main__tab">
+                <div class="main__tab-minutes numbers">
+                    <div class="number-top">55</div>
+                    <div class="number-top-back"><span>55</span></div>
+                    <div class="number-bottom">55</div>
+                    <div class="number-bottom-back"><span>55</span></div>
+                </div>
+                <h2 class="main__tab-title">Minutes</h2>
+            </section>
+
+            <section class="main__tab">
+                <div class="main__tab-seconds numbers">
+                    <div class="number-top">41</div>
+                    <div class="number-top-back"><span>41</span></div>
+                    <div class="number-bottom">41</div>
+                    <div class="number-bottom-back"><span>41</span></div>
+                </div>
+                <h2 class="main__tab-title">Seconds</h2>
+            </section>
+        </div>
+        <div class="w-full flex justify-center">
+            <a class="text-white px-7 py-3 translate-y-10 rounded-md border
+                border-white hover:bg-indigo-500 transition-all
+                hover:border-transparent duration-400
+                font-bold"
+                href="#warteliste">Warteliste</a>
+        </div>
+
+        <!--========== Content ==========-->
+        <section class="text-white body-font">
+            <div class="container px-5 py-24 mx-auto flex flex-col">
+                <div class="lg:w-4/6 mx-auto">
+                    <div class="rounded-lg h-64 overflow-hidden">
+                        <img alt="content" class="object-cover object-center
+                            h-full w-full"
+                            src="https://dummyimage.com/1200x500">
+                    </div>
+                    <div class="flex flex-col sm:flex-row mt-10">
+                        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                            <div class="flex justify-center gap-5">
+                                <div class="w-20 h-20 rounded-full inline-flex
+                                    items-center justify-center bg-gray-200
+                                    text-gray-400">
+                                    <svg fill="none" stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        class="w-10 h-10" viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0
+                                            00-4
+                                            4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <div class="w-20 h-20 rounded-full inline-flex
+                                    items-center justify-center bg-gray-200
+                                    text-gray-400">
+                                    <svg fill="none" stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        class="w-10 h-10" viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0
+                                            00-4
+                                            4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-center text-center
+                                justify-center">
+                                <h2 class="font-bold title-font mt-4
+                                    text-white text-lg">Geschäftsführer</h2>
+                                <div class="w-12 h-1 bg-indigo-500 rounded mt-2
+                                    mb-4"></div>
+                                <p class="text-base">Raclette knausgaard hella
+                                    meggs normcore williamsburg enamel pin
+                                    sartorial venmo tbh hot chicken gentrify
+                                    portland.</p>
+                            </div>
+                        </div>
+                        <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l-2
+                            border-gray-200 sm:border-t-0 border-t-2 mt-4 pt-4
+                            sm:mt-0 text-center sm:text-left">
+                            <p class="leading-relaxed text-lg mb-4">Lorem ipsum
+                                dolor, sit amet consectetur adipisicing elit.
+                                Provident cum, perferendis, rem blanditiis dicta
+                                vel eum sed minima debitis animi doloremque quae
+                                nam totam dolor adipisci asperiores ab eaque
+                                exercitationem dolorum beatae accusamus
+                                doloribus molestiae? Earum, error magnam?
+                                Repudiandae similique fuga neque iusto maiores
+                                in quaerat! Delectus culpa optio, quod rem alias
+                                veritatis praesentium veniam molestias obcaecati
+                                est? Distinctio, optio id impedit ut debitis
+                                dolores laborum, voluptates odit voluptate quam
+                                pariatur beatae error temporibus illum inventore
+                                fugiat adipisci, quo ea! Similique vitae
+                                mollitia at! Ipsa!.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--========== Contact ==========-->
+        <section class="text-white/70 body-font relative" id="warteliste">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col text-center w-full mb-6">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4
+                        text-white">Warteliste</h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                        Erfahre sofort wenn unsere Website erscheint!</p>
+                </div>
+                <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                    <form action="/api/post-waitinglist" method="post"
+                        class="flex
+                        flex-wrap -m-2">
+                        <div class="p-2 w-1/2">
+                            <div class="relative">
+                                <label for="name" class="leading-7 text-sm
+                                    text-white/70">Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full bg-gray-100 bg-opacity-20
+                                    rounded border border-gray-300/20
+                                    text-base focus:bg-opacity-50
+                                    outline-none text-white py-1 px-3
+                                    leading-8 transition-colors duration-200
+                                    ease-in-out">
+                            </div>
+                        </div>
+                        <div class="p-2 w-1/2">
+                            <div class="relative">
+                                <label for="email" class="leading-7 text-sm
+                                    text-white/70">Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full bg-gray-100 bg-opacity-20
+                                    rounded border border-gray-300/20
+                                    text-base focus:bg-opacity-50
+                                    outline-none text-white py-1 px-3
+                                    leading-8 transition-colors duration-200
+                                    ease-in-out">
+                            </div>
+                        </div>
+
+                        <div class="p-2 w-full flex justify-center">
+                            <button type="submit" class="text-white px-7 py-3
+                                translate-y-10
+                                rounded-md border
+                                border-white hover:bg-indigo-500 transition-all
+                                hover:border-transparent duration-400
+                                font-bold">Eintragen</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!--========== Footer ==========-->
+        <footer>
+            <div class="p-2 w-full pt-8 mt-8 text-center">
+                <a class="text-indigo-500">genfu.webservice@gmail.com</a>
+                <p class="leading-normal my-5 text-white/60">49 Smith St.
+                    <br>Saint Cloud, MN 56301
+                </p>
+            </div>
+        </footer>
+        <!--========== JS imports ==========-->
+        <script src="/js/countdown.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    </body>
+</html>
