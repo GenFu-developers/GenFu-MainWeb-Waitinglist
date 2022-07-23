@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--========== CSS ==========-->
-        <link rel="stylesheet" href="./styles/style.css">
-        <!--========== Tailwind CSS ==========-->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="/styles/style.css">
+    <!--========== Tailwind CSS ==========-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
             theme: {
                 extend: {
-                colors: {
-                    clifford: '#da373d',
-                }
+                    animation: {
+                        'bounce-slow': 'bounce 3s linear infinite',
+                    },
+                    colors: {
+                        clifford: '#da373d',
+                    }
                 }
             }
-            }
-        </script>
-        <!--========== Page Title ==========-->
-        <title>GenFu</title>
-        <!--========== Meta Data ==========-->
-        <meta
-            name="description"
-            content="Frontend Mentor Challenges are challenges to improve
-            front-end coding skills by creating real projects."
-            />
-        <meta
-            name="keywords"
-            content="html, css, javascript, front-end, websites"
-            />
-        <meta name="author" content="Alexcarmonadev" />
-    </head>
+        }
+    </script>
 
-    <!--========== Body ==========-->
-    <body class="bg-[url('/assets/bg.png')] bg-cover bg-fixed">
-        <!--========== Scroll signs ==========-->
-        <!-- <div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+    <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=12"></script>
+    <!--========== Page Title ==========-->
+    <title>GenFu</title>
+    <!--========== Meta Data ==========-->
+    <meta name="description" content="Frontend Mentor Challenges are challenges to improve
+            front-end coding skills by creating real projects." />
+    <meta name="keywords" content="html, css, javascript, front-end, websites" />
+    <meta name="author" content="Alexcarmonadev" />
+</head>
 
-        </div> -->
+<!--========== Body ==========-->
+
+<body class="bg-[url('/assets/bg.png')] bg-cover bg-fixed">
+    <!--========== Scroll signs ==========-->
+    <svg class="absolute bottom-20 left-1 lg:left-5 animate-bounce-slow duration-600" width="31" height="256"
+        viewBox="0 0 31 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="15.25" y1="0.995605" x2="15.25" y2="72.0009" stroke="white" />
+        <line x1="15.5" y1="160.814" x2="15.5" y2="255" stroke="white" />
+        <path
+            d="M17.0795 91.7099L16.8239 90.8065C16.9744 90.7497 17.1207 90.6659 17.2628 90.5551C17.4077 90.4472 17.527 90.2994 17.6207 90.1119C17.7145 89.9244 17.7614 89.6844 17.7614 89.3918C17.7614 88.9912 17.669 88.6574 17.4844 88.3903C17.3026 88.1261 17.071 87.994 16.7898 87.994C16.5398 87.994 16.3423 88.0849 16.1974 88.2668C16.0526 88.4486 15.9318 88.7327 15.8352 89.119L15.5966 90.0906C15.4545 90.6759 15.2372 91.1119 14.9446 91.3989C14.6548 91.6858 14.2813 91.8293 13.8239 91.8293C13.4489 91.8293 13.1136 91.7213 12.8182 91.5054C12.5227 91.2923 12.2898 90.994 12.1193 90.6105C11.9489 90.227 11.8636 89.781 11.8636 89.2724C11.8636 88.6048 12.0085 88.0523 12.2983 87.6148C12.5881 87.1773 13.0114 86.9003 13.5682 86.7838L13.8068 87.7384C13.4545 87.8293 13.1903 88.0011 13.0142 88.254C12.8381 88.5097 12.75 88.8435 12.75 89.2554C12.75 89.7241 12.8494 90.0963 13.0483 90.3719C13.25 90.6503 13.4915 90.7895 13.7727 90.7895C14 90.7895 14.1903 90.7099 14.3438 90.5509C14.5 90.3918 14.6165 90.1474 14.6932 89.8179L14.9489 88.727C15.0909 88.1276 15.3111 87.6872 15.6094 87.406C15.9105 87.1276 16.2869 86.9884 16.7386 86.9884C17.108 86.9884 17.4347 87.092 17.7188 87.2994C18.0028 87.5097 18.2259 87.7952 18.3878 88.156C18.5497 88.5196 18.6307 88.9315 18.6307 89.3918C18.6307 90.0395 18.4886 90.548 18.2045 90.9173C17.9205 91.2895 17.5455 91.5537 17.0795 91.7099ZM11.8636 102.122C11.8636 101.509 12.0085 100.98 12.2983 100.537C12.5881 100.094 12.9872 99.7529 13.4957 99.5142C14.0043 99.2756 14.5852 99.1563 15.2386 99.1563C15.9034 99.1563 16.4901 99.2785 16.9986 99.5228C17.5099 99.7699 17.9091 100.114 18.196 100.554C18.4858 100.997 18.6307 101.514 18.6307 102.105C18.6307 102.565 18.5455 102.98 18.375 103.349C18.2045 103.719 17.9659 104.021 17.6591 104.257C17.3523 104.493 16.9943 104.639 16.5852 104.696V103.69C16.8835 103.614 17.1477 103.443 17.3778 103.179C17.6108 102.918 17.7273 102.565 17.7273 102.122C17.7273 101.73 17.625 101.386 17.4205 101.091C17.2188 100.798 16.9332 100.57 16.5639 100.405C16.1974 100.243 15.767 100.162 15.2727 100.162C14.767 100.162 14.3267 100.242 13.9517 100.401C13.5767 100.563 13.2855 100.79 13.0781 101.082C12.8707 101.378 12.767 101.724 12.767 102.122C12.767 102.384 12.8125 102.621 12.9034 102.834C12.9943 103.047 13.125 103.227 13.2955 103.375C13.4659 103.523 13.6705 103.628 13.9091 103.69V104.696C13.5227 104.639 13.1747 104.499 12.8651 104.274C12.5582 104.053 12.3139 103.759 12.1321 103.392C11.9531 103.028 11.8636 102.605 11.8636 102.122ZM12 112.286H18.5455V113.258H17.5568V113.326C17.8807 113.445 18.1435 113.661 18.3452 113.974C18.5469 114.286 18.6477 114.639 18.6477 115.031C18.6477 115.104 18.6463 115.197 18.6435 115.308C18.6406 115.418 18.6364 115.502 18.6307 115.559H17.608C17.6165 115.525 17.6293 115.447 17.6463 115.325C17.6662 115.205 17.6761 115.079 17.6761 114.945C17.6761 114.627 17.6094 114.343 17.4759 114.093C17.3452 113.846 17.1634 113.65 16.9304 113.505C16.7003 113.363 16.4375 113.292 16.142 113.292H12V112.286ZM11.8636 125.331C11.8636 124.74 12.0043 124.222 12.2855 123.776C12.5668 123.332 12.9602 122.986 13.4659 122.736C13.9716 122.489 14.5625 122.365 15.2386 122.365C15.9205 122.365 16.5156 122.489 17.0241 122.736C17.5327 122.986 17.9276 123.332 18.2088 123.776C18.4901 124.222 18.6307 124.74 18.6307 125.331C18.6307 125.922 18.4901 126.439 18.2088 126.882C17.9276 127.328 17.5327 127.675 17.0241 127.922C16.5156 128.172 15.9205 128.297 15.2386 128.297C14.5625 128.297 13.9716 128.172 13.4659 127.922C12.9602 127.675 12.5668 127.328 12.2855 126.882C12.0043 126.439 11.8636 125.922 11.8636 125.331ZM12.767 125.331C12.767 125.78 12.8821 126.149 13.1122 126.439C13.3423 126.729 13.6449 126.943 14.0199 127.082C14.3949 127.222 14.8011 127.291 15.2386 127.291C15.6761 127.291 16.0838 127.222 16.4616 127.082C16.8395 126.943 17.1449 126.729 17.3778 126.439C17.6108 126.149 17.7273 125.78 17.7273 125.331C17.7273 124.882 17.6108 124.513 17.3778 124.223C17.1449 123.933 16.8395 123.719 16.4616 123.58C16.0838 123.44 15.6761 123.371 15.2386 123.371C14.8011 123.371 14.3949 123.44 14.0199 123.58C13.6449 123.719 13.3423 123.933 13.1122 124.223C12.8821 124.513 12.767 124.882 12.767 125.331ZM20.7273 136.958H12V135.952H20.7273V136.958ZM20.7273 145.925H12V144.92H20.7273V145.925Z"
+            fill="white" />
+        <path
+            d="M22.7647 233.646L15.5 246.229L8.23525 233.646L15.0839 243.927L15.5 244.552L15.9161 243.927L22.7647 233.646Z"
+            stroke="white" />
+        <path
+            d="M22.7647 242.237L15.5 254.82L8.23525 242.237L15.0839 252.518L15.5 253.143L15.9161 252.518L22.7647 242.237Z"
+            stroke="white" />
+    </svg>
+
+    <svg class="absolute bottom-20 right-1 lg:right-5  animate-bounce-slow" width="31" height="256" viewBox="0 0 31 256"
+        fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="15.25" y1="0.995605" x2="15.25" y2="72.0009" stroke="white" />
+        <line x1="15.5" y1="160.814" x2="15.5" y2="255" stroke="white" />
+        <path
+            d="M17.0795 91.7099L16.8239 90.8065C16.9744 90.7497 17.1207 90.6659 17.2628 90.5551C17.4077 90.4472 17.527 90.2994 17.6207 90.1119C17.7145 89.9244 17.7614 89.6844 17.7614 89.3918C17.7614 88.9912 17.669 88.6574 17.4844 88.3903C17.3026 88.1261 17.071 87.994 16.7898 87.994C16.5398 87.994 16.3423 88.0849 16.1974 88.2668C16.0526 88.4486 15.9318 88.7327 15.8352 89.119L15.5966 90.0906C15.4545 90.6759 15.2372 91.1119 14.9446 91.3989C14.6548 91.6858 14.2813 91.8293 13.8239 91.8293C13.4489 91.8293 13.1136 91.7213 12.8182 91.5054C12.5227 91.2923 12.2898 90.994 12.1193 90.6105C11.9489 90.227 11.8636 89.781 11.8636 89.2724C11.8636 88.6048 12.0085 88.0523 12.2983 87.6148C12.5881 87.1773 13.0114 86.9003 13.5682 86.7838L13.8068 87.7384C13.4545 87.8293 13.1903 88.0011 13.0142 88.254C12.8381 88.5097 12.75 88.8435 12.75 89.2554C12.75 89.7241 12.8494 90.0963 13.0483 90.3719C13.25 90.6503 13.4915 90.7895 13.7727 90.7895C14 90.7895 14.1903 90.7099 14.3438 90.5509C14.5 90.3918 14.6165 90.1474 14.6932 89.8179L14.9489 88.727C15.0909 88.1276 15.3111 87.6872 15.6094 87.406C15.9105 87.1276 16.2869 86.9884 16.7386 86.9884C17.108 86.9884 17.4347 87.092 17.7188 87.2994C18.0028 87.5097 18.2259 87.7952 18.3878 88.156C18.5497 88.5196 18.6307 88.9315 18.6307 89.3918C18.6307 90.0395 18.4886 90.548 18.2045 90.9173C17.9205 91.2895 17.5455 91.5537 17.0795 91.7099ZM11.8636 102.122C11.8636 101.509 12.0085 100.98 12.2983 100.537C12.5881 100.094 12.9872 99.7529 13.4957 99.5142C14.0043 99.2756 14.5852 99.1563 15.2386 99.1563C15.9034 99.1563 16.4901 99.2785 16.9986 99.5228C17.5099 99.7699 17.9091 100.114 18.196 100.554C18.4858 100.997 18.6307 101.514 18.6307 102.105C18.6307 102.565 18.5455 102.98 18.375 103.349C18.2045 103.719 17.9659 104.021 17.6591 104.257C17.3523 104.493 16.9943 104.639 16.5852 104.696V103.69C16.8835 103.614 17.1477 103.443 17.3778 103.179C17.6108 102.918 17.7273 102.565 17.7273 102.122C17.7273 101.73 17.625 101.386 17.4205 101.091C17.2188 100.798 16.9332 100.57 16.5639 100.405C16.1974 100.243 15.767 100.162 15.2727 100.162C14.767 100.162 14.3267 100.242 13.9517 100.401C13.5767 100.563 13.2855 100.79 13.0781 101.082C12.8707 101.378 12.767 101.724 12.767 102.122C12.767 102.384 12.8125 102.621 12.9034 102.834C12.9943 103.047 13.125 103.227 13.2955 103.375C13.4659 103.523 13.6705 103.628 13.9091 103.69V104.696C13.5227 104.639 13.1747 104.499 12.8651 104.274C12.5582 104.053 12.3139 103.759 12.1321 103.392C11.9531 103.028 11.8636 102.605 11.8636 102.122ZM12 112.286H18.5455V113.258H17.5568V113.326C17.8807 113.445 18.1435 113.661 18.3452 113.974C18.5469 114.286 18.6477 114.639 18.6477 115.031C18.6477 115.104 18.6463 115.197 18.6435 115.308C18.6406 115.418 18.6364 115.502 18.6307 115.559H17.608C17.6165 115.525 17.6293 115.447 17.6463 115.325C17.6662 115.205 17.6761 115.079 17.6761 114.945C17.6761 114.627 17.6094 114.343 17.4759 114.093C17.3452 113.846 17.1634 113.65 16.9304 113.505C16.7003 113.363 16.4375 113.292 16.142 113.292H12V112.286ZM11.8636 125.331C11.8636 124.74 12.0043 124.222 12.2855 123.776C12.5668 123.332 12.9602 122.986 13.4659 122.736C13.9716 122.489 14.5625 122.365 15.2386 122.365C15.9205 122.365 16.5156 122.489 17.0241 122.736C17.5327 122.986 17.9276 123.332 18.2088 123.776C18.4901 124.222 18.6307 124.74 18.6307 125.331C18.6307 125.922 18.4901 126.439 18.2088 126.882C17.9276 127.328 17.5327 127.675 17.0241 127.922C16.5156 128.172 15.9205 128.297 15.2386 128.297C14.5625 128.297 13.9716 128.172 13.4659 127.922C12.9602 127.675 12.5668 127.328 12.2855 126.882C12.0043 126.439 11.8636 125.922 11.8636 125.331ZM12.767 125.331C12.767 125.78 12.8821 126.149 13.1122 126.439C13.3423 126.729 13.6449 126.943 14.0199 127.082C14.3949 127.222 14.8011 127.291 15.2386 127.291C15.6761 127.291 16.0838 127.222 16.4616 127.082C16.8395 126.943 17.1449 126.729 17.3778 126.439C17.6108 126.149 17.7273 125.78 17.7273 125.331C17.7273 124.882 17.6108 124.513 17.3778 124.223C17.1449 123.933 16.8395 123.719 16.4616 123.58C16.0838 123.44 15.6761 123.371 15.2386 123.371C14.8011 123.371 14.3949 123.44 14.0199 123.58C13.6449 123.719 13.3423 123.933 13.1122 124.223C12.8821 124.513 12.767 124.882 12.767 125.331ZM20.7273 136.958H12V135.952H20.7273V136.958ZM20.7273 145.925H12V144.92H20.7273V145.925Z"
+            fill="white" />
+        <path
+            d="M22.7647 233.646L15.5 246.229L8.23525 233.646L15.0839 243.927L15.5 244.552L15.9161 243.927L22.7647 233.646Z"
+            stroke="white" />
+        <path
+            d="M22.7647 242.237L15.5 254.82L8.23525 242.237L15.0839 252.518L15.5 253.143L15.9161 252.518L22.7647 242.237Z"
+            stroke="white" />
+    </svg>
+
+    <main class="px-5">
+
         <!--========== Header ==========-->
         <img class="max-w-[14rem] md:max-w-screen-sm lg:max-w-screen-md
-            mx-auto mt-10"
-            src="/assets/GenFu-Logo-white.png" alt="logo">
+            mx-auto mt-10" src="/assets/GenFu-Logo-white.png" alt="logo">
 
         <!--========== Countdown ==========-->
         <div class="main">
@@ -54,7 +84,7 @@
                     <div class="number-bottom">08</div>
                     <div class="number-bottom-back"><span>08</span></div>
                 </div>
-                <h2 class="main__tab-title">Days</h2>
+                <h2 class="main__tab-title">Tage</h2>
             </section>
 
             <section class="main__tab">
@@ -64,7 +94,7 @@
                     <div class="number-bottom">23</div>
                     <div class="number-bottom-back"><span>23</span></div>
                 </div>
-                <h2 class="main__tab-title">hours</h2>
+                <h2 class="main__tab-title">Stunden</h2>
             </section>
 
             <section class="main__tab">
@@ -74,7 +104,7 @@
                     <div class="number-bottom">55</div>
                     <div class="number-bottom-back"><span>55</span></div>
                 </div>
-                <h2 class="main__tab-title">Minutes</h2>
+                <h2 class="main__tab-title">Minuten</h2>
             </section>
 
             <section class="main__tab">
@@ -84,62 +114,54 @@
                     <div class="number-bottom">41</div>
                     <div class="number-bottom-back"><span>41</span></div>
                 </div>
-                <h2 class="main__tab-title">Seconds</h2>
+                <h2 class="main__tab-title">Sekunden</h2>
             </section>
         </div>
         <div class="w-full flex justify-center">
             <a class="text-white px-7 py-3 translate-y-10 rounded-md border
-                border-white hover:bg-indigo-500 transition-all
-                hover:border-transparent duration-400
-                font-bold"
-                href="#warteliste">Warteliste</a>
+        border-white hover:bg-indigo-500 transition-all
+        hover:border-transparent duration-400
+        font-bold" href="#warteliste">Warteliste</a>
         </div>
+
 
         <!--========== Content ==========-->
         <section class="text-white body-font">
             <div class="container px-5 py-24 mx-auto flex flex-col">
                 <div class="lg:w-4/6 mx-auto">
-                    <div class="rounded-lg h-64 overflow-hidden">
-                        <img alt="content" class="object-cover object-center
-                            h-full w-full"
-                            src="https://dummyimage.com/1200x500">
-                    </div>
+
                     <div class="flex flex-col sm:flex-row mt-10">
                         <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                             <div class="flex justify-center gap-5">
                                 <div class="w-20 h-20 rounded-full inline-flex
-                                    items-center justify-center bg-gray-200
-                                    text-gray-400">
-                                    <svg fill="none" stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2"
-                                        class="w-10 h-10" viewBox="0 0 24 24">
+                            items-center justify-center bg-gray-200
+                            text-gray-400">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
                                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0
-                                            00-4
-                                            4v2"></path>
+                            00-4
+                            4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
                                     </svg>
                                 </div>
                                 <div class="w-20 h-20 rounded-full inline-flex
-                                    items-center justify-center bg-gray-200
-                                    text-gray-400">
-                                    <svg fill="none" stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2"
-                                        class="w-10 h-10" viewBox="0 0 24 24">
+                    items-center justify-center bg-gray-200
+                    text-gray-400">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
                                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0
-                                            00-4
-                                            4v2"></path>
+                    00-4
+                    4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
                                     </svg>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center text-center
-                                justify-center">
+        justify-center">
                                 <h2 class="font-bold title-font mt-4
-                                    text-white text-lg">Geschäftsführer</h2>
+        text-white text-lg">Geschäftsführer</h2>
                                 <div class="w-12 h-1 bg-indigo-500 rounded mt-2
-                                    mb-4"></div>
+        mb-4"></div>
                                 <p class="text-base">Raclette knausgaard hella
                                     meggs normcore williamsburg enamel pin
                                     sartorial venmo tbh hot chicken gentrify
@@ -147,93 +169,96 @@
                             </div>
                         </div>
                         <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l-2
-                            border-gray-200 sm:border-t-0 border-t-2 mt-4 pt-4
-                            sm:mt-0 text-center sm:text-left">
-                            <p class="leading-relaxed text-lg mb-4">Lorem ipsum
+    border-gray-200 sm:border-t-0 border-t-2 mt-4 pt-4
+    sm:mt-0 text-center sm:text-left flex items-center">
+                            <p class="leading-relaxed text-xl  ">Lorem ipsum
                                 dolor, sit amet consectetur adipisicing elit.
                                 Provident cum, perferendis, rem blanditiis dicta
                                 vel eum sed minima debitis animi doloremque quae
                                 nam totam dolor adipisci asperiores ab eaque
-                                exercitationem dolorum beatae accusamus
-                                doloribus molestiae? Earum, error magnam?
-                                Repudiandae similique fuga neque iusto maiores
-                                in quaerat! Delectus culpa optio, quod rem alias
-                                veritatis praesentium veniam molestias obcaecati
-                                est? Distinctio, optio id impedit ut debitis
-                                dolores laborum, voluptates odit voluptate quam
-                                pariatur beatae error temporibus illum inventore
-                                fugiat adipisci, quo ea! Similique vitae
-                                mollitia at! Ipsa!.</p>
+                                exercitationem..</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--========== Contact ==========-->
-        <section class="text-white/70 body-font relative" id="warteliste">
-            <div class="container px-5 py-24 mx-auto">
-                <div class="flex flex-col text-center w-full mb-6">
-                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4
-                        text-white">Warteliste</h1>
-                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-                        Erfahre sofort wenn unsere Website erscheint!</p>
-                </div>
-                <div class="lg:w-1/2 md:w-2/3 mx-auto">
-                    <form action="/api/post-waitinglist" method="post"
-                        class="flex
-                        flex-wrap -m-2">
-                        <div class="p-2 w-1/2">
-                            <div class="relative">
-                                <label for="name" class="leading-7 text-sm
-                                    text-white/70">Name</label>
-                                <input type="text" id="name" name="name"
-                                    class="w-full bg-gray-100 bg-opacity-20
-                                    rounded border border-gray-300/20
-                                    text-base focus:bg-opacity-50
-                                    outline-none text-white py-1 px-3
-                                    leading-8 transition-colors duration-200
-                                    ease-in-out">
-                            </div>
-                        </div>
-                        <div class="p-2 w-1/2">
-                            <div class="relative">
-                                <label for="email" class="leading-7 text-sm
-                                    text-white/70">Email</label>
-                                <input type="email" id="email" name="email"
-                                    class="w-full bg-gray-100 bg-opacity-20
-                                    rounded border border-gray-300/20
-                                    text-base focus:bg-opacity-50
-                                    outline-none text-white py-1 px-3
-                                    leading-8 transition-colors duration-200
-                                    ease-in-out">
-                            </div>
-                        </div>
 
-                        <div class="p-2 w-full flex justify-center">
-                            <button type="submit" class="text-white px-7 py-3
-                                translate-y-10
-                                rounded-md border
-                                border-white hover:bg-indigo-500 transition-all
-                                hover:border-transparent duration-400
-                                font-bold">Eintragen</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
 
-        <!--========== Footer ==========-->
-        <footer>
-            <div class="p-2 w-full pt-8 mt-8 text-center">
-                <a class="text-indigo-500">genfu.webservice@gmail.com</a>
-                <p class="leading-normal my-5 text-white/60">49 Smith St.
-                    <br>Saint Cloud, MN 56301
+
+        <div class="h-screen flex flex-col items-center justify-end">
+            <!--========== Warteliste Text Animated ==========-->
+            <div class="flex flex-col gap-10 justify-center">
+                <p class="animated-text uppercase leading-6 mx-auto">
+                    <span class="mx-auto">
+                        Warteliste
+                    </span>
+                </p>
+                <!--========== Warteliste Beschreibung ==========-->
+                <p class="max-w-xs md:max-w-xl lg: max-w-screen-md text-white text-center">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quis eligendi provident possimus eum
+                    facere, sint nihil libero necessitatibus officia maiores suscipit hic nostrum nam ratione dicta
+                    quaerat
+                    enim quod!
                 </p>
             </div>
-        </footer>
+            <!--========== Contact ==========-->
+            <section class="text-white/70 body-font relative" id="warteliste">
+                <div class="container px-5 py-24 mx-auto">
+                    <div class="mx-auto">
+                        <form action="/api/post-waitinglist" method="post" class="flex
+                        flex-wrap -m-2">
+                            <div class="p-2 w-1/2">
+                                <div class="relative">
+                                    <label for="name" class="leading-7 text-sm
+                                text-white/70">Name</label>
+                                    <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-20
+                                rounded border border-gray-300/20
+                                text-base focus:bg-opacity-50
+                                outline-none text-white py-1 px-3
+                                leading-8 transition-colors duration-200
+                                ease-in-out">
+                                </div>
+                            </div>
+                            <div class="p-2 w-1/2">
+                                <div class="relative">
+                                    <label for="email" class="leading-7 text-sm
+                                text-white/70">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-20
+                                rounded border border-gray-300/20
+                                text-base focus:bg-opacity-50
+                                outline-none text-white py-1 px-3
+                                leading-8 transition-colors duration-200
+                                ease-in-out">
+                                </div>
+                            </div>
+
+                            <div class="p-2 w-full flex justify-center">
+                                <button type="submit" class="text-white px-7 py-3
+                            translate-y-10
+                            rounded-md border
+                            border-white hover:bg-indigo-500 transition-all
+                            hover:border-transparent duration-400
+                            font-bold">Eintragen</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== Footer ==========-->
+            <footer>
+                <div class="p-2 w-full pt-8 mt-8 text-center">
+                    <a class="text-indigo-500">genfu.webservice@gmail.com</a>
+                    <p class="leading-normal my-5 text-white/60">49 Smith St.
+                        <br>Saint Cloud, MN 56301
+                    </p>
+                </div>
+            </footer>
+        </div>
         <!--========== JS imports ==========-->
-        <script src="/js/countdown.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    </body>
+    </main>
+    <script src="/js/countdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+</body>
+
 </html>
