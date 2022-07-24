@@ -299,7 +299,6 @@ html  {
 }
 
 p.animated-text span {
-  font: 700 4em/1 "Oswald", sans-serif;
   letter-spacing: 0;
   padding: 0.25em 0 0.325em;
   display: block;
