@@ -17,6 +17,7 @@
   --charade: hsl(235, 16%, 14%);
   --steel-gray: hsl(234, 17%, 12%);
 
+  --indigo-500: #6366F1;
   /* ------------FONTS------------ */
   --font: 'Red Hat Text', sans-serif;
 }
@@ -25,9 +26,34 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 html  {
   scroll-behavior: smooth;
+  scrollbar-color: rgb(34, 34, 34) black;
+  scrollbar-width: 10px;
 }
+
+/* ------------Scrollbar------------ */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(34, 34, 34);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
+
 
 /* ------------HEADER------------ */
 .header {
