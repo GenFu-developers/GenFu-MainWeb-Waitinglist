@@ -29,6 +29,7 @@ app.listen(PORT, () => {
 })
 
 function appenWaitinglist(data) {
+    if (!data.name || !data.email) return
     fs.readFile('./database/waitinglist.json', 'utf-8', (err, rawFile) => {
         const file = JSON.parse(rawFile)
         if (err) {

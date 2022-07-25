@@ -7,7 +7,7 @@
 :root {
   /* ------------PRIMARY COLORS------------ */
   --manatee: hsl(237, 18%, 59%);
-  --brink-pink: hsl(345, 95%, 68%);
+  --brink-pink: #fff;
 
   /* ------------NEUTRAL COLORS------------ */
   --white: hsl(0, 0%, 100%);
