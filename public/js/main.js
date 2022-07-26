@@ -19,6 +19,7 @@
         return
     }
 
+    // animate scroll arrow
     const moveScrollArrow = () => {
         const e = document.getElementById('scrollSign')
         const top = window.pageYOffset;
