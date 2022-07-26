@@ -4,11 +4,11 @@
         const e = document.getElementById('circleLogo')
         const _e = document.getElementById('circleLogoText')
         const top = window.pageYOffset;
-        if (top > 20) {
+        if (top <= document.body.scrollHeight / 2) {
             e.style.translate = '200px'
             _e.style.translate = '200px'
         }
-        else if (top < 20) {
+        else if (top >= document.body.scrollHeight / 2) {
             e.style.translate = '0px'
             _e.style.translate = '0px'
         }

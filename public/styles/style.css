@@ -11,9 +11,9 @@
 
   /* ------------NEUTRAL COLORS------------ */
   --white: hsl(0, 0%, 100%);
-  --black: hsl(0, 0%, 7%);
+  --black: #01F5FB;
 
-  --martinique: hsl(236, 21%, 26%);
+  --martinique: hsl(239, 60%, 67%);
   --charade: hsl(235, 16%, 14%);
   --steel-gray: hsl(234, 17%, 12%);
 
