@@ -19,6 +19,9 @@
                     },
                     colors: {
                         clifford: '#da373d',
+                    },
+                    screens: {
+                        xs: '560px'
                     }
                 }
             }
@@ -41,7 +44,8 @@
 
 <body class="bg-[url('/assets/bg.png')] bg-cover bg-fixed overflow-x-hidden">
     <!--========== Scroll signs ==========-->
-    <svg id="scrollSign" class="transition-all duration-1000 absolute bottom-20 left-1 lg:left-5  duration-600"
+    <svg id="scrollSign"
+        class="hidden md:block transition-all duration-1000 absolute bottom-20 left-1 lg:left-5  duration-600"
         width="31" height="289" viewBox="0 0 31 289" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="15.25" y1="0.995605" x2="15.25" y2="72.0009" stroke="white" />
         <line x1="15.5" y1="193.814" x2="15.5" y2="288" stroke="white" />
@@ -56,8 +60,87 @@
             stroke="white" />
     </svg>
     <!--========== Rounded Logo + Text Animated ==========-->
+
+
+    <!-- Logo -->
     <svg id="circleLogo"
-        class="transition-all duration-1000 absolute top-56 -right-56 md:-right-36 md:top-96 lg:top-52  animate-spin-slow"
+        class="hidden md:block transition-all duration-1000 absolute top-56 -right-56 md:-right-36 md:top-96 lg:top-52"
+        width="321" height="322" viewBox="0 0 321 322" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M121.704 112.009C122.779 111.542 123.876 111.101 125 110.691C131.797 108.202 139.173 106.956 147.123 106.956C154.211 106.956 160.58 107.963 166.232 109.974C171.88 111.985 176.886 114.786 181.246 118.378C185.603 121.97 189.362 126.113 192.523 130.806L170.973 142.011C168.675 137.988 165.585 134.662 161.705 132.025C157.828 129.394 152.965 128.076 147.123 128.076C141.568 128.076 136.467 129.321 131.821 131.81C127.177 134.302 123.49 137.87 120.76 142.515C118.031 147.16 116.665 152.836 116.665 159.538C116.665 166.148 117.98 171.872 120.617 176.708C123.248 181.546 126.841 185.281 131.393 187.915C135.94 190.549 141.184 191.864 147.123 191.864C150.764 191.864 154.066 191.411 157.035 190.5C160.005 189.59 162.543 188.298 164.65 186.621C166.758 184.945 168.554 182.982 170.039 180.73C171.524 178.48 172.697 176.061 173.559 173.475H146.836V154.799H197.696C198.174 162.843 197.358 170.363 195.253 177.355C193.145 184.347 189.889 190.524 185.482 195.887C181.077 201.254 175.57 205.442 168.962 208.457C162.352 211.475 154.786 212.984 146.261 212.984C138.217 212.984 130.839 211.715 124.137 209.177C123.598 208.973 123.065 208.76 122.54 208.543C132.385 215.653 144.481 219.844 157.555 219.844C190.622 219.844 217.428 193.037 217.428 159.97C217.428 126.902 190.622 100.096 157.555 100.096C144.108 100.096 131.698 104.529 121.704 112.009"
+            fill="url(#paint0_radial_18_2)" />
+        <path
+            d="M121.704 112.009C122.779 111.542 123.876 111.101 125 110.691C131.797 108.202 139.173 106.956 147.123 106.956C154.211 106.956 160.58 107.963 166.232 109.974C171.88 111.985 176.886 114.786 181.246 118.378C185.603 121.97 189.362 126.113 192.523 130.806L170.973 142.011C168.675 137.988 165.585 134.662 161.705 132.025C157.828 129.394 152.965 128.076 147.123 128.076C141.568 128.076 136.467 129.321 131.821 131.81C127.177 134.302 123.49 137.87 120.76 142.515C118.031 147.16 116.665 152.836 116.665 159.538C116.665 166.148 117.98 171.872 120.617 176.708C123.248 181.546 126.841 185.281 131.393 187.915C135.94 190.549 141.184 191.864 147.123 191.864C150.764 191.864 154.066 191.411 157.035 190.5C160.005 189.59 162.543 188.298 164.65 186.621C166.758 184.945 168.554 182.982 170.039 180.73C171.524 178.48 172.697 176.061 173.559 173.475H146.836V154.799H197.696C198.174 162.843 197.358 170.363 195.253 177.355C193.145 184.347 189.889 190.524 185.482 195.887C181.077 201.254 175.57 205.442 168.962 208.457C162.352 211.475 154.786 212.984 146.261 212.984C138.217 212.984 130.839 211.715 124.137 209.177C123.598 208.973 123.065 208.76 122.54 208.543C132.385 215.653 144.481 219.844 157.555 219.844C190.622 219.844 217.428 193.037 217.428 159.97C217.428 126.902 190.622 100.096 157.555 100.096C144.108 100.096 131.698 104.529 121.704 112.009"
+            fill="url(#paint1_radial_18_2)" />
+        <path
+            d="M116.665 159.538C116.665 166.148 117.98 171.872 120.617 176.708C123.248 181.546 126.841 185.281 131.393 187.915C135.94 190.549 141.184 191.865 147.123 191.865C150.764 191.865 154.066 191.411 157.035 190.5C160.005 189.59 162.543 188.299 164.65 186.621C165.525 185.925 166.343 185.176 167.111 184.382C156.24 182.418 145.879 178.583 136.031 172.871C129.586 167.891 123.14 162.912 116.696 157.932C116.677 158.462 116.665 158.996 116.665 159.538"
+            fill="url(#paint2_radial_18_2)" />
+        <path
+            d="M191.935 185.839C190.163 189.456 188.013 192.807 185.482 195.887C181.077 201.254 175.57 205.442 168.962 208.457C162.352 211.475 154.786 212.984 146.261 212.984C138.217 212.984 130.839 211.715 124.137 209.177C123.598 208.973 123.065 208.76 122.54 208.543C132.385 215.653 144.481 219.844 157.555 219.844C183.175 219.844 205.033 203.75 213.581 181.121C206.669 183.808 199.456 185.384 191.935 185.839Z"
+            fill="url(#paint3_radial_18_2)" />
+        <path
+            d="M224.275 128.017C223.234 128.536 222.799 129.784 223.288 130.841C227.507 139.988 229.648 149.776 229.648 159.97C229.648 198.391 198.392 229.647 159.971 229.647C139.566 229.647 120.413 220.691 107.32 205.604C106.573 204.749 105.85 203.876 105.15 202.982C104.361 204.21 103.159 205.145 101.739 205.587C102.452 206.498 103.185 207.39 103.945 208.262C117.843 224.373 138.239 233.94 159.971 233.94C179.728 233.94 198.303 226.246 212.274 212.274C226.247 198.302 233.941 179.727 233.941 159.97C233.941 149.145 231.665 138.746 227.177 129.028C226.818 128.245 226.041 127.79 225.233 127.79C224.909 127.79 224.582 127.862 224.275 128.017"
+            fill="url(#paint4_linear_18_2)" />
+        <path
+            d="M107.666 107.665C93.6943 121.636 86 140.212 86 159.97C86 165.481 86.6073 170.96 87.8077 176.289C88.0724 177.468 89.2667 178.19 90.4369 177.889C91.5633 177.601 92.2479 176.468 91.9925 175.334C90.8645 170.318 90.2933 165.16 90.2933 159.97C90.2933 121.55 121.55 90.2928 159.971 90.2928C175.705 90.2928 190.553 95.41 202.909 105.092L205.557 101.713C192.438 91.4334 176.675 86 159.971 86C140.212 86 121.636 93.6944 107.666 107.665"
+            fill="url(#paint5_linear_18_2)" />
+        <path
+            d="M200.257 108.455C200.257 113.736 204.554 118.032 209.834 118.032C215.115 118.032 219.411 113.736 219.411 108.455C219.411 103.174 215.115 98.8784 209.834 98.8784C204.554 98.8784 200.257 103.174 200.257 108.455ZM203.56 108.455C203.56 104.995 206.375 102.181 209.834 102.181C213.294 102.181 216.108 104.995 216.108 108.455C216.108 111.915 213.294 114.729 209.834 114.729C206.375 114.729 203.56 111.915 203.56 108.455Z"
+            fill="url(#paint6_linear_18_2)" />
+        <path
+            d="M90.2933 199.597C90.2933 204.877 94.5894 209.174 99.8699 209.174C101.326 209.174 102.71 208.847 103.945 208.262C105.263 207.641 106.418 206.726 107.32 205.604C108.651 203.959 109.446 201.872 109.446 199.597C109.446 194.317 105.15 190.02 99.8699 190.02C94.5894 190.02 90.2933 194.317 90.2933 199.597M93.5957 199.597C93.5957 196.136 96.4091 193.323 99.8699 193.323C103.331 193.323 106.144 196.136 106.144 199.597C106.144 200.842 105.781 202.005 105.15 202.982C104.361 204.21 103.159 205.145 101.739 205.588C101.148 205.772 100.52 205.871 99.8699 205.871C96.4091 205.871 93.5957 203.057 93.5957 199.597"
+            fill="url(#paint7_linear_18_2)" />
+        <defs>
+            <radialGradient id="paint0_radial_18_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(150.321 143.78) rotate(14.547) scale(102.684 102.684)">
+                <stop stop-color="#00FFFF" />
+                <stop offset="0.994413" stop-color="#0071BC" />
+                <stop offset="1" stop-color="#0071BC" />
+            </radialGradient>
+            <radialGradient id="paint1_radial_18_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(150.321 143.78) rotate(14.547) scale(102.684 102.684)">
+                <stop stop-color="#00FFFF" />
+                <stop offset="0.994413" stop-color="#0071BC" />
+                <stop offset="1" stop-color="#0071BC" />
+            </radialGradient>
+            <radialGradient id="paint2_radial_18_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(162.273 136.86) rotate(106.294) scale(85.2007 85.2007)">
+                <stop stop-color="#00FFFF" />
+                <stop offset="0.994413" stop-color="#0071BC" />
+                <stop offset="1" stop-color="#0071BC" />
+            </radialGradient>
+            <radialGradient id="paint3_radial_18_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(162.273 136.86) rotate(106.294) scale(85.2007 85.2007)">
+                <stop stop-color="#00FFFF" />
+                <stop offset="0.994413" stop-color="#0071BC" />
+                <stop offset="1" stop-color="#0071BC" />
+            </radialGradient>
+            <linearGradient id="paint4_linear_18_2" x1="167.84" y1="233.94" x2="167.84" y2="127.79"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="#F4F4F4" />
+            </linearGradient>
+            <linearGradient id="paint5_linear_18_2" x1="145.778" y1="177.958" x2="145.778" y2="86"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="#F4F4F4" />
+            </linearGradient>
+            <linearGradient id="paint6_linear_18_2" x1="209.834" y1="118.032" x2="209.834" y2="98.8784"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="#F4F4F4" />
+            </linearGradient>
+            <linearGradient id="paint7_linear_18_2" x1="99.8699" y1="209.174" x2="99.8699" y2="190.02"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="#F4F4F4" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Text -->
+    <svg id="circleLogoText"
+        class="hidden md:block transition-all duration-1000 absolute top-56 -right-56 md:-right-36 md:top-96 lg:top-52  animate-spin-slow"
         width="321" height="322" viewBox="0 0 321 322" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M164.548 47.5115C164.439 47.1768 164.294 46.8768 164.115 46.6117C163.94 46.3432 163.729 46.1145 163.484 45.9256C163.242 45.7367 162.967 45.5925 162.659 45.4931C162.351 45.3936 162.013 45.3439 161.645 45.3439C161.041 45.3439 160.493 45.4997 159.999 45.8113C159.505 46.1228 159.112 46.5818 158.821 47.1884C158.529 47.7949 158.383 48.539 158.383 49.4206C158.383 50.3023 158.531 51.0463 158.826 51.6529C159.121 52.2594 159.52 52.7184 160.024 53.03C160.528 53.3416 161.094 53.4973 161.724 53.4973C162.307 53.4973 162.821 53.373 163.265 53.1245C163.713 52.8726 164.061 52.5179 164.309 52.0605C164.561 51.5998 164.687 51.0579 164.687 50.4348L165.065 50.5144H162.003V49.4206H165.88V50.5144C165.88 51.3529 165.701 52.0821 165.343 52.7019C164.989 53.3217 164.498 53.8023 163.872 54.1436C163.249 54.4817 162.533 54.6507 161.724 54.6507C160.823 54.6507 160.031 54.4386 159.348 54.0144C158.668 53.5901 158.138 52.9869 157.757 52.2047C157.379 51.4225 157.19 50.4945 157.19 49.4206C157.19 48.6152 157.298 47.891 157.513 47.248C157.732 46.6017 158.04 46.0515 158.438 45.5975C158.836 45.1434 159.306 44.7954 159.85 44.5534C160.393 44.3115 160.992 44.1905 161.645 44.1905C162.182 44.1905 162.682 44.2717 163.146 44.4341C163.613 44.5932 164.029 44.8202 164.394 45.1152C164.762 45.4069 165.068 45.7566 165.314 46.1642C165.559 46.5686 165.728 47.0177 165.821 47.5115H164.548Z"
@@ -173,273 +256,209 @@
             d="M107.648 65.1322L105.391 61.2228L106.407 60.6361L110.225 67.2494L109.209 67.8361L108.563 66.7166L108.494 66.7564C108.533 67.1817 108.456 67.6065 108.265 68.0308C108.072 68.4522 107.726 68.8071 107.226 69.0955C106.813 69.3341 106.394 69.4558 105.968 69.4606C105.54 69.4625 105.128 69.3328 104.733 69.0714C104.335 68.8072 103.974 68.3938 103.649 67.8312L101.223 63.629L102.239 63.0424L104.625 67.1757C104.904 67.6579 105.261 67.9646 105.696 68.0959C106.135 68.2255 106.565 68.1685 106.987 67.9249C107.239 67.779 107.459 67.5661 107.646 67.2862C107.835 67.0045 107.942 66.6789 107.966 66.3092C107.992 65.9379 107.886 65.5455 107.648 65.1322Z"
             fill="white" />
         <path d="M134.14 52.8102L134.423 53.8667L130.12 55.0196L129.837 53.9632L134.14 52.8102Z" fill="white" />
-        <path
-            d="M121.704 112.009C122.779 111.542 123.876 111.101 125 110.691C131.797 108.202 139.173 106.956 147.123 106.956C154.211 106.956 160.58 107.963 166.232 109.974C171.88 111.985 176.886 114.786 181.246 118.378C185.603 121.97 189.362 126.113 192.523 130.806L170.973 142.011C168.675 137.988 165.585 134.662 161.705 132.025C157.828 129.394 152.965 128.076 147.123 128.076C141.568 128.076 136.467 129.321 131.821 131.81C127.177 134.302 123.49 137.87 120.76 142.515C118.031 147.16 116.665 152.836 116.665 159.538C116.665 166.148 117.98 171.872 120.617 176.708C123.248 181.546 126.841 185.281 131.393 187.915C135.94 190.549 141.184 191.864 147.123 191.864C150.764 191.864 154.066 191.411 157.035 190.5C160.005 189.59 162.543 188.298 164.65 186.621C166.758 184.945 168.554 182.982 170.039 180.73C171.524 178.48 172.697 176.061 173.559 173.475H146.836V154.799H197.696C198.174 162.843 197.358 170.363 195.253 177.355C193.145 184.347 189.889 190.524 185.482 195.887C181.077 201.254 175.57 205.442 168.962 208.457C162.352 211.475 154.786 212.984 146.261 212.984C138.217 212.984 130.839 211.715 124.137 209.177C123.598 208.973 123.065 208.76 122.54 208.543C132.385 215.653 144.481 219.844 157.555 219.844C190.622 219.844 217.428 193.037 217.428 159.97C217.428 126.902 190.622 100.096 157.555 100.096C144.108 100.096 131.698 104.529 121.704 112.009"
-            fill="url(#paint0_radial_1_278)" />
-        <path
-            d="M121.704 112.009C122.779 111.542 123.876 111.101 125 110.691C131.797 108.202 139.173 106.956 147.123 106.956C154.211 106.956 160.58 107.963 166.232 109.974C171.88 111.985 176.886 114.786 181.246 118.378C185.603 121.97 189.362 126.113 192.523 130.806L170.973 142.011C168.675 137.988 165.585 134.662 161.705 132.025C157.828 129.394 152.965 128.076 147.123 128.076C141.568 128.076 136.467 129.321 131.821 131.81C127.177 134.302 123.49 137.87 120.76 142.515C118.031 147.16 116.665 152.836 116.665 159.538C116.665 166.148 117.98 171.872 120.617 176.708C123.248 181.546 126.841 185.281 131.393 187.915C135.94 190.549 141.184 191.864 147.123 191.864C150.764 191.864 154.066 191.411 157.035 190.5C160.005 189.59 162.543 188.298 164.65 186.621C166.758 184.945 168.554 182.982 170.039 180.73C171.524 178.48 172.697 176.061 173.559 173.475H146.836V154.799H197.696C198.174 162.843 197.358 170.363 195.253 177.355C193.145 184.347 189.889 190.524 185.482 195.887C181.077 201.254 175.57 205.442 168.962 208.457C162.352 211.475 154.786 212.984 146.261 212.984C138.217 212.984 130.839 211.715 124.137 209.177C123.598 208.973 123.065 208.76 122.54 208.543C132.385 215.653 144.481 219.844 157.555 219.844C190.622 219.844 217.428 193.037 217.428 159.97C217.428 126.902 190.622 100.096 157.555 100.096C144.108 100.096 131.698 104.529 121.704 112.009"
-            fill="url(#paint1_radial_1_278)" />
-        <path
-            d="M116.665 159.538C116.665 166.148 117.98 171.872 120.617 176.708C123.248 181.546 126.841 185.281 131.393 187.915C135.94 190.549 141.184 191.865 147.123 191.865C150.764 191.865 154.066 191.411 157.035 190.5C160.005 189.59 162.543 188.299 164.65 186.621C165.525 185.925 166.343 185.176 167.111 184.382C156.24 182.418 145.879 178.583 136.031 172.871C129.586 167.891 123.14 162.912 116.696 157.932C116.677 158.462 116.665 158.996 116.665 159.538"
-            fill="url(#paint2_radial_1_278)" />
-        <path
-            d="M191.935 185.839C190.163 189.456 188.013 192.807 185.482 195.887C181.077 201.254 175.57 205.442 168.962 208.457C162.352 211.475 154.786 212.984 146.261 212.984C138.217 212.984 130.839 211.715 124.137 209.177C123.598 208.973 123.065 208.76 122.54 208.543C132.385 215.653 144.481 219.844 157.555 219.844C183.175 219.844 205.033 203.75 213.581 181.121C206.669 183.808 199.456 185.384 191.935 185.839Z"
-            fill="url(#paint3_radial_1_278)" />
-        <path
-            d="M224.275 128.017C223.234 128.536 222.799 129.784 223.288 130.841C227.507 139.988 229.648 149.776 229.648 159.97C229.648 198.391 198.392 229.647 159.971 229.647C139.566 229.647 120.413 220.691 107.32 205.604C106.573 204.749 105.85 203.876 105.15 202.982C104.361 204.21 103.159 205.145 101.739 205.587C102.452 206.498 103.185 207.39 103.945 208.262C117.843 224.373 138.239 233.94 159.971 233.94C179.728 233.94 198.303 226.246 212.274 212.274C226.247 198.302 233.941 179.727 233.941 159.97C233.941 149.145 231.665 138.746 227.177 129.028C226.818 128.245 226.041 127.79 225.233 127.79C224.909 127.79 224.582 127.862 224.275 128.017"
-            fill="url(#paint4_linear_1_278)" />
-        <path
-            d="M107.666 107.665C93.6943 121.636 86 140.212 86 159.97C86 165.481 86.6073 170.96 87.8077 176.289C88.0724 177.468 89.2667 178.19 90.4369 177.889C91.5633 177.601 92.2479 176.468 91.9925 175.334C90.8645 170.318 90.2933 165.16 90.2933 159.97C90.2933 121.55 121.55 90.2928 159.971 90.2928C175.705 90.2928 190.553 95.41 202.909 105.092L205.557 101.713C192.438 91.4334 176.675 86 159.971 86C140.212 86 121.636 93.6944 107.666 107.665"
-            fill="url(#paint5_linear_1_278)" />
-        <path
-            d="M200.257 108.455C200.257 113.736 204.554 118.032 209.834 118.032C215.115 118.032 219.411 113.736 219.411 108.455C219.411 103.174 215.115 98.8784 209.834 98.8784C204.554 98.8784 200.257 103.174 200.257 108.455ZM203.56 108.455C203.56 104.995 206.375 102.181 209.834 102.181C213.294 102.181 216.108 104.995 216.108 108.455C216.108 111.915 213.294 114.729 209.834 114.729C206.375 114.729 203.56 111.915 203.56 108.455Z"
-            fill="url(#paint6_linear_1_278)" />
-        <path
-            d="M90.2933 199.597C90.2933 204.877 94.5894 209.174 99.8699 209.174C101.326 209.174 102.71 208.847 103.945 208.262C105.263 207.641 106.418 206.726 107.32 205.604C108.651 203.959 109.446 201.872 109.446 199.597C109.446 194.317 105.15 190.02 99.8699 190.02C94.5894 190.02 90.2933 194.317 90.2933 199.597M93.5957 199.597C93.5957 196.136 96.4091 193.323 99.8699 193.323C103.331 193.323 106.144 196.136 106.144 199.597C106.144 200.842 105.781 202.005 105.15 202.982C104.361 204.21 103.159 205.145 101.739 205.588C101.148 205.772 100.52 205.871 99.8699 205.871C96.4091 205.871 93.5957 203.057 93.5957 199.597"
-            fill="url(#paint7_linear_1_278)" />
-        <defs>
-            <radialGradient id="paint0_radial_1_278" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(150.321 143.78) rotate(14.547) scale(102.684 102.684)">
-                <stop stop-color="#00FFFF" />
-                <stop offset="0.994413" stop-color="#0071BC" />
-                <stop offset="1" stop-color="#0071BC" />
-            </radialGradient>
-            <radialGradient id="paint1_radial_1_278" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(150.321 143.78) rotate(14.547) scale(102.684 102.684)">
-                <stop stop-color="#00FFFF" />
-                <stop offset="0.994413" stop-color="#0071BC" />
-                <stop offset="1" stop-color="#0071BC" />
-            </radialGradient>
-            <radialGradient id="paint2_radial_1_278" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(162.273 136.86) rotate(106.294) scale(85.2007 85.2007)">
-                <stop stop-color="#00FFFF" />
-                <stop offset="0.994413" stop-color="#0071BC" />
-                <stop offset="1" stop-color="#0071BC" />
-            </radialGradient>
-            <radialGradient id="paint3_radial_1_278" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(162.273 136.86) rotate(106.294) scale(85.2007 85.2007)">
-                <stop stop-color="#00FFFF" />
-                <stop offset="0.994413" stop-color="#0071BC" />
-                <stop offset="1" stop-color="#0071BC" />
-            </radialGradient>
-            <linearGradient id="paint4_linear_1_278" x1="167.84" y1="233.94" x2="167.84" y2="127.79"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="white" />
-                <stop offset="1" stop-color="#F4F4F4" />
-            </linearGradient>
-            <linearGradient id="paint5_linear_1_278" x1="145.778" y1="177.958" x2="145.778" y2="86"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="white" />
-                <stop offset="1" stop-color="#F4F4F4" />
-            </linearGradient>
-            <linearGradient id="paint6_linear_1_278" x1="209.834" y1="118.032" x2="209.834" y2="98.8784"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="white" />
-                <stop offset="1" stop-color="#F4F4F4" />
-            </linearGradient>
-            <linearGradient id="paint7_linear_1_278" x1="99.8699" y1="209.174" x2="99.8699" y2="190.02"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="white" />
-                <stop offset="1" stop-color="#F4F4F4" />
-            </linearGradient>
-        </defs>
     </svg>
+    <main class="px-5 snap-y">
+        <div class="h-screen snap-center">
 
-
-
-    <main class="px-5">
-
-        <!--========== Header ==========-->
-        <!--========== Logo Image ==========-->
-        <img class="max-w-[14rem] md:max-w-screen-sm lg:max-w-screen-md
+            <!--========== Header ==========-->
+            <!--========== Logo Image ==========-->
+            <img class="xs:max-w-md sm:max-w-lg md:max-w-xl lg:max-w-screen-sm
             mx-auto mt-10" src="/assets/GenFu-Logo-white.png" alt="logo">
 
-        <!--========== Countdown ==========-->
-        <p class="text-white mx-auto w-max relative top-4 text-lg font-bold">noch</p>
-        <div class="main">
-            <section class="main__tab">
-                <div class="main__tab-days numbers">
-                    <div class="number-top">08</div>
-                    <div class="number-top-back"><span>08</span></div>
-                    <div class="number-bottom">08</div>
-                    <div class="number-bottom-back"><span>08</span></div>
-                </div>
-                <h2 class="main__tab-title">Tage</h2>
-            </section>
+            <!--========== Countdown ==========-->
+            <p class="text-white mx-auto w-max relative top-4 text-lg font-bold">noch</p>
+            <div class="main">
+                <section class="main__tab">
+                    <div class="main__tab-days numbers">
+                        <div class="number-top">08</div>
+                        <div class="number-top-back"><span>08</span></div>
+                        <div class="number-bottom">08</div>
+                        <div class="number-bottom-back"><span>08</span></div>
+                    </div>
+                    <h2 class="main__tab-title">Tage</h2>
+                </section>
 
-            <section class="main__tab">
-                <div class="main__tab-hours numbers">
-                    <div class="number-top">23</div>
-                    <div class="number-top-back"><span>23</span></div>
-                    <div class="number-bottom">23</div>
-                    <div class="number-bottom-back"><span>23</span></div>
-                </div>
-                <h2 class="main__tab-title">Stunden</h2>
-            </section>
+                <section class="main__tab">
+                    <div class="main__tab-hours numbers">
+                        <div class="number-top">23</div>
+                        <div class="number-top-back"><span>23</span></div>
+                        <div class="number-bottom">23</div>
+                        <div class="number-bottom-back"><span>23</span></div>
+                    </div>
+                    <h2 class="main__tab-title">Stunden</h2>
+                </section>
 
-            <section class="main__tab">
-                <div class="main__tab-minutes numbers">
-                    <div class="number-top">55</div>
-                    <div class="number-top-back"><span>55</span></div>
-                    <div class="number-bottom">55</div>
-                    <div class="number-bottom-back"><span>55</span></div>
-                </div>
-                <h2 class="main__tab-title">Minuten</h2>
-            </section>
+                <section class="main__tab">
+                    <div class="main__tab-minutes numbers">
+                        <div class="number-top">55</div>
+                        <div class="number-top-back"><span>55</span></div>
+                        <div class="number-bottom">55</div>
+                        <div class="number-bottom-back"><span>55</span></div>
+                    </div>
+                    <h2 class="main__tab-title">Minuten</h2>
+                </section>
 
-            <section class="main__tab">
-                <div class="main__tab-seconds numbers">
-                    <div class="number-top">41</div>
-                    <div class="number-top-back"><span>41</span></div>
-                    <div class="number-bottom">41</div>
-                    <div class="number-bottom-back"><span>41</span></div>
-                </div>
-                <h2 class="main__tab-title">Sekunden</h2>
-            </section>
-        </div>
-        <p class="text-white mx-auto w-max relative top-7 text-lg font-bold italic">und GenFu Webservices Beta ist
-            online!</p>
-        <!-- <div class="w-full flex justify-center">
+                <section class="main__tab">
+                    <div class="main__tab-seconds numbers">
+                        <div class="number-top">41</div>
+                        <div class="number-top-back"><span>41</span></div>
+                        <div class="number-bottom">41</div>
+                        <div class="number-bottom-back"><span>41</span></div>
+                    </div>
+                    <h2 class="main__tab-title">Sekunden</h2>
+                </section>
+            </div>
+            <p class="text-white mx-auto text-center  relative top-7 text-lg font-bold italic">
+                GenFu Webservices Beta ist online!
+            </p>
+            <!-- <div class="w-full flex justify-center">
             <a class="text-white px-7 py-3 translate-y-10 rounded-md border
             border-white hover:bg-indigo-500 transition-all
             hover:border-transparent duration-400
             font-bold" href="#warteliste">Warteliste</a>
         </div> -->
 
-        <div class="flex flex-col items-center justify-end mt-16">
-            <!--========== Warteliste Text Animated ==========-->
-            <div class="flex flex-col gap-5 justify-center">
-                <p class="animated-text uppercase leading-6 mx-auto">
-                    <span class="mx-auto text-4xl md:text-6xl font-black">
-                        Warteliste
-                    </span>
-                </p>
-                <!--========== Warteliste Beschreibung ==========-->
-                <p class="max-w-xs md:max-w-xl lg: max-w-screen-md text-white text-center">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quis eligendi provident possimus eum
-                    facere, sint nihil libero necessitatibus officia maiores suscipit hic nostrum nam ratione dicta
-                    quaerat
-                    enim quod!
-                </p>
-            </div>
-            <!--========== Contact ==========-->
-            <section class="text-white/70 body-font relative" id="warteliste">
-                <div class="container px-5 mt-3  mx-auto">
-                    <div class="mx-auto">
-                        <form action="/api/post-waitinglist" method="post" class="flex
-                        flex-wrap ">
-                            <div class="p-2 w-1/2">
-                                <div class="relative">
-                                    <label for="name" class="leading-7 text-sm
-                                text-white/70">Name</label>
-                                    <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-20
-                                rounded border border-gray-300/20
-                                text-base focus:bg-opacity-50
-                                outline-none text-white py-1 px-3
-                                leading-8 transition-colors duration-200
-                                ease-in-out">
-                                </div>
-                            </div>
-                            <div class="p-2 w-1/2">
-                                <div class="relative">
-                                    <label for="email" class="leading-7 text-sm
-                                text-white/70">Email</label>
-                                    <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-20
-                                rounded border border-gray-300/20
-                                text-base focus:bg-opacity-50
-                                outline-none text-white py-1 px-3
-                                leading-8 transition-colors duration-200
-                                ease-in-out">
-                                </div>
-                            </div>
-
-                            <div class="p-2 w-full flex justify-center">
-                                <button type="submit" class="text-white px-7 py-3
-                            translate-y-10
-                            rounded-md border
-                            border-white hover:bg-indigo-500 transition-all
-                            hover:border-transparent duration-400
-                            font-bold">Eintragen</button>
-                            </div>
-                        </form>
-                    </div>
+            <div class="flex flex-col items-center justify-end mt-16">
+                <!--========== Warteliste Text Animated ==========-->
+                <div class="flex flex-col gap-5 justify-center font-mono">
+                    <p class="animated-text uppercase leading-6 mx-auto">
+                        <span class="mx-auto text-4xl md:text-6xl font-black">
+                            Warteliste
+                        </span>
+                    </p>
+                    <!--========== Warteliste Beschreibung ==========-->
+                    <p class="max-w-xs md:max-w-xl lg: max-w-screen-md text-white text-center">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quis eligendi provident possimus
+                        eum
+                        facere, sint nihil libero necessitatibus officia maiores suscipit.
+                    </p>
                 </div>
-            </section>
+                <!--========== Contact ==========-->
+                <section class="text-white/70 body-font relative" id="warteliste">
+                    <div class="container px-5 mt-3  mx-auto">
+                        <div class="mx-auto">
+                            <form action="/api/post-waitinglist" method="post" class="flex">
+                                <div class="p-2 w-1/2">
+                                    <div class="relative">
+                                        <label for="name" class="leading-7 text-sm
+                                text-white/70">Name</label>
+                                        <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-20
+                                rounded border border-gray-300/20
+                                text-base focus:bg-opacity-50
+                                outline-none text-white py-1 px-3
+                                leading-8 transition-colors duration-200
+                                ease-in-out">
+                                    </div>
+                                </div>
+                                <div class="p-2 w-1/2">
+                                    <div class="relative">
+                                        <label for="email" class="leading-7 text-sm
+                                text-white/70">Email</label>
+                                        <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-20
+                                rounded border border-gray-300/20
+                                text-base focus:bg-opacity-50
+                                outline-none text-white py-1 px-3
+                                leading-8 transition-colors duration-200
+                                ease-in-out">
+                                    </div>
+                                </div>
+                                <button type="submit" class=" self-center relative top-3 group">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        aria-hidden="true" role="img" width="2.5em" height="2.5em"
+                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                                        <path class="fill-green-600 hover:fill-green-500 transition-colors duration-400"
+                                            d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm-2 19.59l-5-5L10.59 15L14 18.41L21.41 11l1.596 1.586Z" />
+                                        <path fill="white"
+                                            d="m14 21.591l-5-5L10.591 15L14 18.409L21.41 11l1.595 1.585L14 21.591z" />
+                                    </svg>
+                                </button>
+
+                                <!-- <div class="p-2 w-full flex justify-center">
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
 
 
+        <div class="h-screen snap-center">
 
-        <!--========== Content ==========-->
-        <section class="text-white body-font">
-            <div class="container px-5 py-24 mx-auto flex flex-col">
-                <div class="lg:w-4/6 mx-auto">
+            <!--========== Content ==========-->
+            <section class="text-white body-font">
+                <div class="container px-5 py-24 mx-auto flex flex-col">
+                    <div class="lg:w-4/6 mx-auto">
 
-                    <div class="flex flex-col sm:flex-row mt-10">
-                        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                            <div class="flex justify-center gap-5">
-                                <div class="w-20 h-20 rounded-full inline-flex
+                        <div class="flex flex-col sm:flex-row mt-10">
+                            <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                                <div class="flex justify-center gap-5">
+                                    <div class="w-20 h-20 rounded-full inline-flex
                             items-center justify-center bg-gray-200
                             text-gray-400">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" class="w-10 h-10"
+                                            viewBox="0 0 24 24">
+                                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0
                             00-4
                             4v2"></path>
-                                        <circle cx="12" cy="7" r="4"></circle>
-                                    </svg>
-                                </div>
-                                <div class="w-20 h-20 rounded-full inline-flex
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="w-20 h-20 rounded-full inline-flex
                     items-center justify-center bg-gray-200
                     text-gray-400">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" class="w-10 h-10"
+                                            viewBox="0 0 24 24">
+                                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0
                     00-4
                     4v2"></path>
-                                        <circle cx="12" cy="7" r="4"></circle>
-                                    </svg>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center text-center
+        justify-center">
+                                    <h2 class="font-bold title-font mt-4
+        text-white text-lg">Geschäftsführer</h2>
+                                    <div class="w-12 h-1 bg-indigo-500 rounded mt-2
+        mb-4"></div>
+                                    <p class="text-base">Raclette knausgaard hella
+                                        meggs normcore williamsburg enamel pin
+                                        sartorial venmo tbh hot chicken gentrify
+                                        portland.</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-center text-center
-        justify-center">
-                                <h2 class="font-bold title-font mt-4
-        text-white text-lg">Geschäftsführer</h2>
-                                <div class="w-12 h-1 bg-indigo-500 rounded mt-2
-        mb-4"></div>
-                                <p class="text-base">Raclette knausgaard hella
-                                    meggs normcore williamsburg enamel pin
-                                    sartorial venmo tbh hot chicken gentrify
-                                    portland.</p>
+                            <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l-2
+        border-gray-200 sm:border-t-0 border-t-2 mt-4 pt-4
+        sm:mt-0 text-center sm:text-left flex items-center">
+                                <p class="leading-relaxed text-xl  ">Lorem ipsum
+                                    dolor, sit amet consectetur adipisicing elit.
+                                    Provident cum, perferendis, rem blanditiis dicta
+                                    vel eum sed minima debitis animi doloremque quae
+                                    nam totam dolor adipisci asperiores ab eaque
+                                    exercitationem..</p>
                             </div>
-                        </div>
-                        <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l-2
-    border-gray-200 sm:border-t-0 border-t-2 mt-4 pt-4
-    sm:mt-0 text-center sm:text-left flex items-center">
-                            <p class="leading-relaxed text-xl  ">Lorem ipsum
-                                dolor, sit amet consectetur adipisicing elit.
-                                Provident cum, perferendis, rem blanditiis dicta
-                                vel eum sed minima debitis animi doloremque quae
-                                nam totam dolor adipisci asperiores ab eaque
-                                exercitationem..</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
 
 
 
-        <!--========== Footer ==========-->
-        <footer>
-            <div class="p-2 w-full pt-8 mt-8 text-center">
-                <a class="text-indigo-500">genfu.webservice@gmail.com</a>
-                <p class="leading-normal my-5 text-white/60">49 Smith St.
-                    <br>Saint Cloud, MN 56301
-                </p>
-            </div>
-        </footer>
-        <!--========== JS imports ==========-->
+            <!--========== Footer ==========-->
+            <footer>
+                <div class="p-2 w-full pt-8 mt-8 text-center">
+                    <a class="text-indigo-500">genfu.webservice@gmail.com</a>
+                    <p class="leading-normal my-5 text-white/60">49 Smith St.
+                        <br>Saint Cloud, MN 56301
+                    </p>
+                </div>
+            </footer>
+            <!--========== JS imports ==========-->
+        </div>
     </main>
     <script src="/js/countdown.js"></script>
     <script src="/js/main.js"></script>
