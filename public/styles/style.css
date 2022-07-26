@@ -280,6 +280,12 @@ html  {
   }
 }
 
+@media screen and (min-width: 752px) {
+  .main  {
+    scale:.7;
+  }
+}
+
 @media screen and (max-width: 752px) {
   .main  {
     scale:1.5;

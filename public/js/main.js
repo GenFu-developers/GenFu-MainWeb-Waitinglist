@@ -39,16 +39,16 @@
         const documentE = document.documentElement
         const isTouch = isTouchDevice()
         console.log(isTouch);
-        if (!isTouch) {
-            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-            if (st > lastScrollTop) {
-                // downscroll code
-                documentE.scrollTop = documentE.scrollHeight - documentE.clientHeight;
-            } else {
-                // upscroll code
-                documentE.scrollTop = 0
-            }
+        // if (!isTouch) {
+        var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+        if (st > lastScrollTop) {
+            // downscroll code
+            window.scrollTo(0, documentE.scrollHeight - documentE.clientHeight);
+        } else {
+            // upscroll code
+            window.scrollTo(0, 0)
         }
+        // }
         lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     })
 })()

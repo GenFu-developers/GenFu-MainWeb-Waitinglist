@@ -1,5 +1,6 @@
 
 window.addEventListener('load', () => {
+    let futureDate = new Date("2022-09-01T19:20:00.997Z");
     const fromDays = document.querySelector('.main__tab-days');
     const fromHours = document.querySelector('.main__tab-hours');
     const fromMinutes = document.querySelector('.main__tab-minutes');
@@ -14,7 +15,6 @@ window.addEventListener('load', () => {
 
     let totalSeconds = 0;
 
-    let futureDate = new Date("2022-08-14T19:21:37.997Z");
 
     function init() {
         totalSeconds = Math.floor((futureDate - new Date()) / 1000);
