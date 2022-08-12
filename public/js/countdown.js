@@ -1,10 +1,10 @@
-
-window.addEventListener('load', () => {
-    let futureDate = new Date("2022-09-01T19:20:00.997Z");
-    const fromDays = document.querySelector('.main__tab-days');
-    const fromHours = document.querySelector('.main__tab-hours');
-    const fromMinutes = document.querySelector('.main__tab-minutes');
-    const fromSeconds = document.querySelector('.main__tab-seconds');
+(() => {
+    const displayDict = {
+        days: document.getElementById('countdownDays'),
+        hours: document.getElementById('countdownHours'),
+        minutes: document.getElementById('countdownMinutes'),
+        seconds: document.getElementById('countdownSeconds'),
+    }
 
     let timeLeft = {
         days: 0,
@@ -13,19 +13,23 @@ window.addEventListener('load', () => {
         seconds: 0,
     };
 
-    let totalSeconds = 0;
+    const futureDate = new Date("2022-09-01T19:20:00.997Z");
 
-
-    function init() {
-        totalSeconds = Math.floor((futureDate - new Date()) / 1000);
-        setTimeLeft();
-        let interval = setInterval(() => {
-            if (totalSeconds < 0) {
-                clearInterval(interval);
-            }
-            countTime();
-        }, 1000);
+    const updateTime = () => {
+        displayDict.days.innerText = `${timeLeft.days}`
+        displayDict.hours.innerText = `${timeLeft.hours}`
+        displayDict.minutes.innerText = `${timeLeft.minutes}`
+        displayDict.seconds.innerText = `${timeLeft.seconds}`
     }
+
+    totalSeconds = Math.floor((futureDate - new Date()) / 1000);
+    setTimeLeft();
+    let interval = setInterval(() => {
+        if (totalSeconds < 0) {
+            clearInterval(interval);
+        }
+        countTime();
+    }, 1000);
 
     function countTime() {
         if (totalSeconds > 0) {
@@ -44,50 +48,12 @@ window.addEventListener('load', () => {
             }
         }
         --totalSeconds;
-        printTime();
+        updateTime()
     }
-
-    function printTime() {
-        animateFlip(fromDays, timeLeft.days);
-        animateFlip(fromHours, timeLeft.hours);
-        animateFlip(fromMinutes, timeLeft.minutes);
-        animateFlip(fromSeconds, timeLeft.seconds);
-    }
-
-    function animateFlip(element, value) {
-        const valueInDom = element.querySelector('.number-bottom-back').innerText;
-        const currentValue = value < 10 ? '0' + value : '' + value;
-
-        if (valueInDom === currentValue) return;
-
-        element.querySelector('.number-top-back span').innerText = currentValue;
-        element.querySelector('.number-bottom-back span').innerText = currentValue;
-
-        gsap.to(element.querySelector('.number-top'), 0.7, {
-            rotationX: '-180deg',
-            transformPerspective: 300,
-            ease: Quart.easeOut,
-            onComplete: function () {
-                element.querySelector('.number-top').innerText = currentValue;
-                element.querySelector('.number-bottom').innerText = currentValue;
-                gsap.set(element.querySelector('.number-top'), { rotationX: 0 });
-            },
-        });
-
-        gsap.to(element.querySelector('.number-top-back'), 0.7, {
-            rotationX: 0,
-            transformPerspective: 300,
-            ease: Quart.easeOut,
-            clearProps: 'all',
-        });
-    }
-
     function setTimeLeft() {
         timeLeft.days = Math.floor(totalSeconds / (60 * 60 * 24));
         timeLeft.hours = Math.floor((totalSeconds / (60 * 60)) % 24);
         timeLeft.minutes = Math.floor((totalSeconds / 60) % 60);
         timeLeft.seconds = Math.floor(totalSeconds % 60);
     }
-
-    init();
-});
+})()
